@@ -10,7 +10,7 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
     
@@ -19,27 +19,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem.button?.title = "Fetching..."
         
-        if let screenInfo: [String : Any] = (NSScreen.main()?.deviceDescription)! {
-            for info in screenInfo {
-                print(info)
-                print(screenInfo["NSDeviceSize"]!)
-                if let sizeInfo = screenInfo["NSDeviceSize"] as! CGSize!{
-                    print(sizeInfo.width)
-                    print(sizeInfo.height)
-                    let roundedWidth: Int = Int(sizeInfo.width)
-                    let roundedHeight: Int = Int(sizeInfo.height)
-                    let cleanText: String = "\(roundedWidth) x \(roundedHeight)"
-                    statusItem.button?.title = cleanText
+        
+        func setMenuToResolution() {
+            if let screenInfo: [String : Any] = (NSScreen.main()?.deviceDescription)! {
+                for info in screenInfo {
+                    print(info)
+                    print(screenInfo["NSDeviceSize"]!)
+                    if let sizeInfo = screenInfo["NSDeviceSize"] as! CGSize!{
+                        print(sizeInfo.width)
+                        print(sizeInfo.height)
+                        let roundedWidth: Int = Int(sizeInfo.width)
+                        let roundedHeight: Int = Int(sizeInfo.height)
+                        let cleanText: String = "\(roundedWidth) x \(roundedHeight)"
+                        statusItem.button?.title = cleanText
+                    }
                 }
             }
+            
         }
-        
+        setMenuToResolution()
         statusItem.menu = NSMenu()
         addConfigurationMenuItem()
         
-        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.NSApplicationDidChangeScreenParameters,
+                                                                object: NSApplication.shared(),
+                                                                queue: OperationQueue.main) {
+                                                                    notification -> Void in
+                                                                    print("screen parameters changed")
+                                                                    setMenuToResolution()
+        }
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
