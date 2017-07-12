@@ -22,9 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         func setMenuToResolution() {
             if let screenInfo: [String : Any] = (NSScreen.main()?.deviceDescription)! {
-                for info in screenInfo {
-                    print(info)
-                    print(screenInfo["NSDeviceSize"]!)
+                //for info in screenInfo {
                     if let sizeInfo = screenInfo["NSDeviceSize"] as! CGSize!{
                         print(sizeInfo.width)
                         print(sizeInfo.height)
@@ -32,8 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         let roundedHeight: Int = Int(sizeInfo.height)
                         let cleanText: String = "\(roundedWidth) x \(roundedHeight)"
                         statusItem.button?.title = cleanText
+                        print(cleanText)
                     }
-                }
+                //}
             }
             
         }
