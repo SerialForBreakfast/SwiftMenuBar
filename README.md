@@ -1,7 +1,7 @@
 # SwiftMenuBar
 
 An outline for Swift Menu Based Applications
-Displays Current resolution at runtime
+Displays Current resolution of Display 0(main display)
 
 Copyright 2017 - Joe McCraw
 
