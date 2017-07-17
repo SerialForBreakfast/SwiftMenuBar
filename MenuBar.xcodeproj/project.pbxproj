@@ -11,6 +11,7 @@
 		A817071B1F16BC7F00189C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817071A1F16BC7F00189C8C /* ViewController.swift */; };
 		A817071D1F16BC7F00189C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A817071C1F16BC7F00189C8C /* Assets.xcassets */; };
 		A81707201F16BC7F00189C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A817071E1F16BC7F00189C8C /* Main.storyboard */; };
+		A817072C1F16F49400189C8C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817072B1F16F49400189C8C /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A817071C1F16BC7F00189C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A817071F1F16BC7F00189C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A81707211F16BC7F00189C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A817072B1F16F49400189C8C /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				A81707181F16BC7F00189C8C /* AppDelegate.swift */,
 				A817071A1F16BC7F00189C8C /* ViewController.swift */,
+				A817072B1F16F49400189C8C /* ViewController2.swift */,
 				A817071C1F16BC7F00189C8C /* Assets.xcassets */,
 				A817071E1F16BC7F00189C8C /* Main.storyboard */,
 				A81707211F16BC7F00189C8C /* Info.plist */,
@@ -135,6 +138,7 @@
 			files = (
 				A817071B1F16BC7F00189C8C /* ViewController.swift in Sources */,
 				A81707191F16BC7F00189C8C /* AppDelegate.swift in Sources */,
+				A817072C1F16F49400189C8C /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

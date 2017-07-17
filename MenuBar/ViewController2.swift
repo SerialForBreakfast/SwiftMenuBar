@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController2.swift
 //  MenuBar
 //
 //  Created by Joseph McCraw on 7/12/17.
@@ -8,27 +8,27 @@
 
 import Cocoa
 
-var supportedModes = [CGDisplayMode]()
-
-class ViewController: NSViewController {
+class ViewController2: NSViewController {
 
     @IBOutlet var textLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print("dssa d")
         print(supportedModes)
         for supportedMode in supportedModes {
             textLabel.stringValue = String(describing: textLabel) + "\n \(supportedMode)"
+            print("iterating through supported modes")
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
 
-
+    
 }
-
